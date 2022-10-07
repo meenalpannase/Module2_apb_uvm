@@ -1,7 +1,7 @@
 all:
 	make clean; make sim; make clean;
 
-VCS_CMD_RAND = vcs -V -R  -full64 -sverilog +v2k -debug_access+all -ntb_opts uvm-1.2 -debug_pp +ntb_random_seed_automatic -override_timescale=1ns/1ps -gui -kdb
+VCS_CMD_RAND = vcs -V -R     -full64 -sverilog +v2k - debug_access+all -ntb_opts uvm-1.2 -debug_pp +ntb_random_seed_automatic -override_timescale=1ns/1ps -gui -kdb
  
 sim:
 	${VCS_CMD_RAND} \
@@ -23,4 +23,4 @@ sim:
 	# vsim -view waveform.wlf &
 
 clean:
-	rm -rf work/ transcript waveform.wlf
+	//rm -rf work/ transcript waveform.wlf
