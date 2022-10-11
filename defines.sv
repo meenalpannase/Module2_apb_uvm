@@ -1,2 +1,2 @@
-`define addrWidth 8
-`define dataWidth 8
+`define addrWidth 
+`define dataWidth 
